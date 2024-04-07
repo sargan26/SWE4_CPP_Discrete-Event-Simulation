@@ -40,5 +40,6 @@ int main() {
     trafficSimulation.initSimulation();
     trafficSimulation.printLanes();
 
+
     return 0;
 }
