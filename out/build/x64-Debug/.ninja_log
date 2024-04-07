@@ -1,0 +1,13 @@
+# ninja log v5
+61	3181	7341888971840000	CMakeFiles/des.dir/src/des/events.cpp.obj	899c4db915682035
+76	3205	7341888972080000	CMakeFiles/des.dir/src/des/random_utils.cpp.obj	858f8081c68fb345
+84	2962	7341888969640000	CMakeFiles/des.dir/src/des/storeSimulation.cpp.obj	8fd63ff590be2537
+80	2346	7341888963470000	CMakeFiles/des.dir/src/des/simulation.cpp.obj	20a80395b613e91d
+72	3059	7341888970620000	CMakeFiles/des.dir/src/des/main.cpp.obj	6e671d8abc88341
+32	58	0	clean	8c45b54705a541e8
+49	1400	7341892288620000	build.ninja	176c85444c81da7e
+57	2680	7341888966800000	CMakeFiles/des.dir/src/des/car.cpp.obj	59f66f494f962b06
+89	3037	7341888970400000	CMakeFiles/des.dir/src/des/trafficSimulation.cpp.obj	cb1645882907f636
+3210	6305	7341889001530000	bin/des.exe	bebb703f6e9ddeba
+65	1279	7341810614760000	CMakeFiles/des.dir/src/des/trafficLight.cpp.obj	8938c01945eecbd8
+68	2971	7341888969630000	CMakeFiles/des.dir/src/des/lane.cpp.obj	b6e53859b2c248e0

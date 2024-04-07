@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(ue02) ### TODO: set project name, e.g. "project(ue01)"
+project(ue02) ### TODO: set project name, e.g. "project(ue02)"
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON) # enable virtual folders for projects if supported by the build system/IDE
 
@@ -22,7 +22,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)       # disable compiler specific extensions
 # helper function to simplify definition of projects
 function(add_target name)
    file(GLOB_RECURSE SRC "./src/${name}/*")   # recursively collect all files in sub-folder for project
-   add_executable(${name} ${SRC})       # define project "name" based on files found in SRC
+   add_executable(${name} ${SRC} "src/des/trafficLight.h" "src/des/trafficLight.cpp" "src/des/lane.cpp" "src/des/lane.h" "src/des/helper_functions.cpp" "src/des/helper_functions.h")       # define project "name" based on files found in SRC
 
    #set required warning flags
    if("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU"        OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU"        OR

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\car.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\events.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\helper_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\lane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\random_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\simulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\storeSimulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\trafficLight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\trafficSimulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\car.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\helper_functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\lane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\random_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\simulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\storeSimulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\trafficLight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\src\des\trafficSimulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\Andere Computer\Stand PC\_EIGNES\Studium\4. Semester\Moderne Prg\Übung\ue02-sargan26\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8C2DE05F-2859-3158-A89B-E84EAE589C23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3CE0D322-8A43-30B8-A159-1C92DCF36789}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
