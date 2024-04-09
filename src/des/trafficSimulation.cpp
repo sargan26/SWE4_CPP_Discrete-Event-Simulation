@@ -3,10 +3,15 @@
 #include <iostream>
 
 TrafficSimulation::TrafficSimulation() {
-	lanes[0] = std::make_unique<Lane>("North");
+	// East and West starts with red light
 	lanes[1] = std::make_unique<Lane>("East");
-	lanes[2] = std::make_unique<Lane>("South");
 	lanes[3] = std::make_unique<Lane>("West");
+
+	// North and South starts with green light
+	lanes[0] = std::make_unique<Lane>("North");
+	lanes[0]->toggleTrafficLight();
+	lanes[2] = std::make_unique<Lane>("South");
+	lanes[2]->toggleTrafficLight();
 }
 
 void TrafficSimulation::init() {
@@ -25,6 +30,8 @@ void TrafficSimulation::run() {
 		lanes[i]->run();
 	}
 }
+
+
 
 
 void TrafficSimulation::print() const {
