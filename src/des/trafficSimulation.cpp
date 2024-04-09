@@ -24,9 +24,9 @@ void TrafficSimulation::init() {
 
 void TrafficSimulation::run() {
 	// Init lanes
-	for (size_t i = 0; i < laneCount; i++)
-	//for (size_t i = 0; i < 1; i++)
+	for (size_t i = 0; i < 1; i++)
 	{
+		std::cout << "- Lane " << lanes[i]->getDirection() << " -\n";
 		lanes[i]->run();
 	}
 }

@@ -39,11 +39,14 @@ Die Simulationsbibliothek basiert auf folgenden Hauptkomponenten:
 
 ### **Testfälle**
 
+In den Bildern unten sind die Testfälle für die Simulation eines Eisladens dargestellt. Die Testfälle umfassen die Ankunft von Kunden, die Bestellung von Eis und das Verlassen des Ladens. Die Testfälle demonstrieren die korrekte Abfolge der Ereignisse und die korrekte Verarbeitung der Ereignisse durch die Simulation.
+
+![](doc/test1.png)
+![](doc/test2.png)
+
 ## **Beispiel 2**
 
 ### **Lösungsidee**
-
-# Lösungsidee für die Straßenkreuzungssimulation
 
 #### Einleitung
 
@@ -77,6 +80,25 @@ Die Simulation einer Straßenkreuzung demonstriert die Anwendung der entwickelte
 
 - Die Ereignisverarbeitung (`processEvent`) in den Ereignisklassen manipuliert die Zustände der `Lane`, wie das Umschalten der Ampel und das Zählen von Fahrzeugen.
 
-- Statistiken werden in CSV-Dateien exportiert, wobei für jede `Lane` eine separate Datei generiert wird, um die Analysierbarkeit zu erleichtern.
+- Statistiken werden in CSV-Dateien exportiert, wobei für jede `Lane` eine separate Datei generiert wird.
 
 ### **Testfälle**
+
+Im ersten Bild sieht man einen Test für die Car Klasse. Es wird ein Auto erstellt und die ID und Modellbezeichnung ausgegeben.
+
+![](doc/test3.png)
+
+Im zweiten Bild sieht einen Test der Print / Ausgabe Funktion für eine Lane.
+
+![](doc/test4.png)
+
+Ab dem dritten Bild fängt der Test für die Simulation an. Hier wird die Lane North angezeigt.
+Man sieht, Arrive und Leave Events, sowie die Ampelphasenwechsel jedes Minute. Außerdem wird alle 4 Minuten die Statistik ausgegeben und exportiert.
+
+![](doc/test5.png)
+![](doc/test6.png)
+![](doc/test7.png)
+
+Hier sieht man den CSV Export der Statistik.
+
+![](doc/test8.png)

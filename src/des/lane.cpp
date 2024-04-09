@@ -6,7 +6,7 @@
 
 void Lane::init() {
 	//unsigned int dayDuration = 24 * 60 * 60 * 1000 + 1; // 24 hours in milliseconds
-	unsigned int dayDuration = 4 * 60 * 1000 + 1; // 4 Minutes in milliseconds
+	unsigned int dayDuration = 24 * 60 * 60 * 1000 + 1; // 60 Minutes in milliseconds
 	unsigned int currentTime = phaseDuration;
 
 	while (currentTime < dayDuration) {
