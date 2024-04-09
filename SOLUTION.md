@@ -43,4 +43,40 @@ Die Simulationsbibliothek basiert auf folgenden Hauptkomponenten:
 
 ### **Lösungsidee**
 
+# Lösungsidee für die Straßenkreuzungssimulation
+
+#### Einleitung
+
+Die Simulation einer Straßenkreuzung demonstriert die Anwendung der entwickelten Simulationsbibliothek. Diese Simulation modelliert das Verkehrsverhalten an einer Kreuzung, die von zwei Straßen gebildet wird, mit Ampelregelung für jede Fahrtrichtung. Im Fokus stehen die Dynamiken der Fahrzeugankünfte, die Ampelphasen und die Verarbeitung der Wartezeiten.
+
+#### Kernkomponenten und Funktionsweise
+
+##### Klassenstruktur
+
+- `TrafficSimulation`: Koordiniert die Simulation und verwaltet vier `Lane`-Instanzen, die jeweils eine Fahrtrichtung repräsentieren.
+
+- `Lane`: Erbt von der `simulation`-Klasse und repräsentiert eine Fahrtrichtung an der Kreuzung. Jede Lane verwaltet ihre eigene Ampel und die zugehörigen Fahrzeugereignisse.
+
+- `Car`: Modelliert ein einzelnes Fahrzeug mit eindeutiger ID und Modellbezeichnung.
+
+- Ereignisklassen (`ArriveCarEvent`, `LeaveCarEvent`, `TrafficLightSwitchEvent`, `PrintStatisticsEvent`, `ExportStatisticsEvent`): Spezifische Ereignistypen, die die Logik der Ankunft und Abfahrt von Fahrzeugen, Ampelumschaltungen und Statistikexport implementieren.
+
+##### Funktionsweise
+
+- **Ampelsteuerung**: Die Simulation startet mit Grünphasen für die Nord-Süd-Richtung und Rotphasen für Ost-West. Die Ampelphasen wechseln regelmäßig durch `TrafficLightSwitchEvent`.
+
+- **Fahrzeugankünfte**: Fahrzeuge erreichen die Kreuzung in jeder Fahrtrichtung zu zufälligen Zeitpunkten, basierend auf einer Exponentialverteilung. `ArriveCarEvent`-Instanzen werden generiert und geplant.
+
+- **Fahrzeugabfahrten**: Wenn ein Fahrzeug an einer grünen Ampel ankommt und keine Warteschlange vorhanden ist, verlässt es die Kreuzung sofort. Andernfalls reiht es sich in die Warteschlange ein und wartet auf ein `LeaveCarEvent`, dessen Zeitpunkt normalverteilt ist.
+
+- **Statistikerfassung und -export**: `PrintStatisticsEvent` und `ExportStatisticsEvent` werden genutzt, um regelmäßig Statistiken zu Mindest-, Maximal- und Durchschnittswartezeiten sowie zur Länge der Warteschlange zu erfassen und zu exportieren.
+
+#### Implementierungsdetails
+
+- Die Implementierung nutzt `std::unique_ptr` für Ereignisobjekte und eine Priority Queue innerhalb jeder `Lane` für die Ereignisverarbeitung.
+
+- Die Ereignisverarbeitung (`processEvent`) in den Ereignisklassen manipuliert die Zustände der `Lane`, wie das Umschalten der Ampel und das Zählen von Fahrzeugen.
+
+- Statistiken werden in CSV-Dateien exportiert, wobei für jede `Lane` eine separate Datei generiert wird, um die Analysierbarkeit zu erleichtern.
+
 ### **Testfälle**
