@@ -1,4 +1,5 @@
 #pragma once
+#pragma once
 
 #include <queue>
 #include <vector>
@@ -15,8 +16,8 @@ public:
 	unsigned int time;
 
 protected:
-	std::priority_queue<std::unique_ptr<event>, 
-						std::vector<std::unique_ptr<event> >, 
-						eventComparator> 
-	eventQueue;
+	std::priority_queue<std::unique_ptr<event>,
+		std::vector<std::unique_ptr<event> >,
+		eventComparator>
+		eventQueue;
 };

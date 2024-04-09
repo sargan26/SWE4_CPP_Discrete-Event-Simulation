@@ -4,6 +4,8 @@
 #include "random_utils.h"
 #include "Car.h"
 
+class Lane;  // forward declaration
+
 class event {
 public:
     event(unsigned int t);
@@ -23,24 +25,58 @@ struct eventComparator
 
 // --- Event subclasses ---
 
-// --- Car Events
+// --- Intersection Events
 class ArriveCarEvent : public event {
 private:
     Car car;
+    Lane& lane; // reference to the lane is belongs
 
 public:
-    ArriveCarEvent(unsigned int t, const Car& c) : event(t), car(c) {}
+    ArriveCarEvent(unsigned int t, const Car& c, Lane& lane) : event(t), car(c), lane(lane) {}
     void processEvent() override;
     std::string toString() const;
 };
 
 class LeaveCarEvent : public event {
+private:
+    Lane& lane; // reference to the lane is belongs
+    unsigned int leaveDuration;
+
 public:
-    LeaveCarEvent(unsigned int t) : event(t) {}
+    LeaveCarEvent(unsigned int t, Lane& lane, unsigned int leaveDuration) : event(t), lane(lane), leaveDuration(leaveDuration) {}
 	void processEvent() override;
     std::string toString() const;
 };
 
+class TrafficLightSwitchEvent : public event {
+private:
+    Lane & lane; // reference to the lane is belongs
+
+public:
+    TrafficLightSwitchEvent(unsigned int t, Lane & lane) : event(t), lane(lane) {}
+    void processEvent() override;
+    std::string toString() const;
+};
+
+class PrintStatisticsEvent : public event {
+private:
+    Lane& lane; // reference to the lane is belongs
+
+public:
+    PrintStatisticsEvent(unsigned int t, Lane& lane) : event(t), lane(lane) {}
+    void processEvent() override;
+    std::string toString() const;
+};
+
+class ExportStatisticsEvent : public event {
+private:
+    Lane& lane; // reference to the lane is belongs
+
+public:
+    ExportStatisticsEvent(unsigned int t, Lane& lane) : event(t), lane(lane) {}
+    void processEvent() override;
+    std::string toString() const;
+};
 
 // --- IceStore Events
 class arriveEvent : public event {

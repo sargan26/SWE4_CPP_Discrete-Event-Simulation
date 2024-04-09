@@ -2,10 +2,10 @@
 
 class TrafficLight {
 private:
-	bool isGreen;
+	bool green;
 
 public:
-	TrafficLight() : isGreen(false) {}
+	TrafficLight() : green(false) {}
 	void change();
-	bool getStatus() const { return isGreen;}
+	bool isGreen() const { return green;}
 };

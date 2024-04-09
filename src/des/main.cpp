@@ -37,8 +37,11 @@ int main() {
     std::cout << "--- Test: Traffic simulation ---\n";
     TrafficSimulation trafficSimulation;
 
-    trafficSimulation.initSimulation();
-    trafficSimulation.printLanes();
+    trafficSimulation.init();
+    trafficSimulation.print();
+
+    std::cout << "--- Test: Traffic simulation run ---\n";
+    trafficSimulation.run();
 
 
     return 0;
