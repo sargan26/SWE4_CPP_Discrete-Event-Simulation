@@ -44,5 +44,13 @@ int main() {
     trafficSimulation.run();
 
 
+    /*
+    std::cout << "print integer_normal";
+    for (int i = 0; i < 100; i++) {
+		std::cout << get_random_integer_normal(3000, 500) << " ";
+	}
+    */
+
+
     return 0;
 }

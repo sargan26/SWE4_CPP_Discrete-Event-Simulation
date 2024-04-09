@@ -23,7 +23,7 @@ void ArriveCarEvent::processEvent()  {
             //car can leave immediately
 			lane.scheduleEvent(std::make_unique<LeaveCarEvent>(time, lane, 0));
         }
-        else {
+        else if (lane.getCarCount() >= 1) {
             if (!lane.getCarLeaving()) {
                 // car has to wait
                 lane.setCarLeaving(true);
@@ -43,11 +43,27 @@ std::string ArriveCarEvent::toString() const {
 }
 
 void LeaveCarEvent::processEvent() {
-    if (lane.getIsGreen()) {
+    if (lane.getIsGreen() && lane.getCarCount() >= 1) {
 	    lane.decrementCarCount();
-		lane.addWaitTime(leaveDuration);
+        lane.addWaitTime(leaveDuration);
     }
     lane.setCarLeaving(false);    
+
+    if (lane.getIsGreen()) {
+        if (lane.getCarCount() == 1) {
+            //car can leave immediately
+            lane.scheduleEvent(std::make_unique<LeaveCarEvent>(time, lane, 0));
+        }
+        else if (lane.getCarCount() >= 1) {
+            if (!lane.getCarLeaving()) {
+                // car has to wait
+                lane.setCarLeaving(true);
+                unsigned int leaveDuration = get_random_integer_normal(3000, 500);
+                lane.scheduleEvent(std::make_unique<LeaveCarEvent>(time + leaveDuration, lane, leaveDuration));
+            }
+        }
+    }
+
 	std::cout << this->toString() << "\n";
 }
 
@@ -65,6 +81,22 @@ std::string LeaveCarEvent::toString() const {
 void TrafficLightSwitchEvent::processEvent() {
     lane.toggleTrafficLight();
     lane.addCarCountHistory();
+
+    if (lane.getIsGreen()) {
+        if (lane.getCarCount() == 1) {
+            //car can leave immediately
+            lane.scheduleEvent(std::make_unique<LeaveCarEvent>(time, lane, 0));
+        }
+        else if (lane.getCarCount() >= 1) {
+            if (!lane.getCarLeaving()) {
+                // car has to wait
+                lane.setCarLeaving(true);
+                unsigned int leaveDuration = get_random_integer_normal(3000, 500);
+                lane.scheduleEvent(std::make_unique<LeaveCarEvent>(time + leaveDuration, lane, leaveDuration));
+            }
+        }
+    }
+
     std::cout << this->toString() << "\n"; // print after toggling, else false information!
 }
 
@@ -96,6 +128,7 @@ void ExportStatisticsEvent::processEvent() {
             << lane.getWaitTimeMin() << ","
             << lane.getWaitTimeMax() << ","
             << lane.getWaitTimeAvg() << ","
+            << lane.getCarCount() << ","
             << lane.getAvgCarCount() << "\n";
 
         fileCSV.close();

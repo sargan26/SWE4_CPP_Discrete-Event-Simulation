@@ -86,3 +86,11 @@ void Lane::printStatistics() {
 	std::cout << "Max wait time: " << waitTimeMax << std::endl;
 	std::cout << "Avg wait time: " << waitTimeAvg << std::endl << std::endl;
 }
+
+void Lane::printWaitTimes() {
+	std::cout << "Lane direction: " << direction << std::endl;
+	std::cout << "Wait times: " << std::endl;
+	for (auto waitTime : waitTimes) {
+		std::cout << waitTime << std::endl;
+	}
+}

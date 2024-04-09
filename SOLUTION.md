@@ -39,7 +39,9 @@ Die Simulationsbibliothek basiert auf folgenden Hauptkomponenten:
 
 ### **Testfälle**
 
-In den Bildern unten sind die Testfälle für die Simulation eines Eisladens dargestellt. Die Testfälle umfassen die Ankunft von Kunden, die Bestellung von Eis und das Verlassen des Ladens. Die Testfälle demonstrieren die korrekte Abfolge der Ereignisse und die korrekte Verarbeitung der Ereignisse durch die Simulation.
+In den Bildern unten sind die Testfälle für die Simulation eines Eisladens dargestellt. 
+
+Die Testfälle umfassen die Ankunft von Kunden, die Bestellung von Eis und das Verlassen des Ladens. Die Testfälle demonstrieren die korrekte Abfolge der Ereignisse und die korrekte Verarbeitung der Ereignisse durch die Simulation.
 
 ![](doc/test1.png)
 ![](doc/test2.png)
@@ -88,7 +90,7 @@ Im ersten Bild sieht man einen Test für die Car Klasse. Es wird ein Auto erstel
 
 ![](doc/test3.png)
 
-Im zweiten Bild sieht einen Test der Print / Ausgabe Funktion für eine Lane.
+Im zweiten Bild sieht einen Test der Print / Ausgabe Funktion für Lanes.
 
 ![](doc/test4.png)
 
@@ -102,3 +104,8 @@ Man sieht, Arrive und Leave Events, sowie die Ampelphasenwechsel jedes Minute. A
 Hier sieht man den CSV Export der Statistik.
 
 ![](doc/test8.png)
+
+Hier sieht man zwei Auswertungen der Statistik mit unterschiedlichen Parametern.
+
+![](doc/test9.png)
+![](doc/test10.png)

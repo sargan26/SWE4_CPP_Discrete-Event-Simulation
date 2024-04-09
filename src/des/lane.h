@@ -49,4 +49,5 @@ public:
 	int getWaitTimeAvg() const { return waitTimeAvg; }
 	void updateStatistics();
 	void printStatistics();
+	void printWaitTimes();
 };

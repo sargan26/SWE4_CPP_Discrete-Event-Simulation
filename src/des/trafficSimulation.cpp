@@ -29,6 +29,8 @@ void TrafficSimulation::run() {
 		std::cout << "- Lane " << lanes[i]->getDirection() << " -\n";
 		lanes[i]->run();
 	}
+
+	//lanes[0]->printWaitTimes();
 }
 
 
